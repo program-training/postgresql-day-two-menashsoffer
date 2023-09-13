@@ -25,4 +25,17 @@ VALUES (1,1), (2,2), (3,3);
 
 SELECT * FROM university.teachercourse;
 
+CREATE TABLE university.Grades(
+    grade_id SERIAL PRIMARY KEY,
+    enrollment_id INTEGER,
+    FOREIGN KEY(enrollment_id) REFERENCES university.enrollments(enrollment_id),
+    grade INTEGER
+);
+
+INSERT INTO university.grades(enrollment_id, grade)
+VALUES (20, 86),(21, 95),(22, 76),(23, 99),(24, 82);
+
+SELECT * FROM university.grades;
+
+-- DROP TABLE university.grades
 
