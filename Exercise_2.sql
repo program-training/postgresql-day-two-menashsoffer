@@ -9,8 +9,16 @@ CREATE TABLE university.Enrollments(
 
 INSERT INTO Enrollments(student_id, course_id)
 VALUES (1,1), (2,1), (3,2), (4,3), (1,3);
+ALTER TABLE Enrollments 
+ADD CONSTRAINT unique_enrollment
+UNIQUE (student_id, course_id);
 
 SELECT * FROM university.enrollments;
+
+INSERT INTO Enrollments(student_id, course_id)
+VALUES (1,1) 
+ON CONFLICT DO NOTHING;
+
 
 CREATE TABLE university.TeacherCourse(
     teacherCourse_id SERIAL PRIMARY KEY,
