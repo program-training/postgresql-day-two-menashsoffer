@@ -44,5 +44,5 @@ VALUES ('Introduction to Programming', 'Computer Science', 3),
 		('Calculus I', 'Mathematics', 4),
 		('World History', 'History', 3)
 
--- Exercise 4
+
 
